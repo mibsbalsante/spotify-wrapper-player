@@ -1,0 +1,50 @@
+{
+  "name": "spotify-wrapper-player",
+  "version": "1.0.0",
+  "description": "A player using the spotify-wrapper lib.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint && npm run test:coverage",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "npm test -- --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "functions": 80,
+    "lines": 80,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mibsbalsante/js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Mibs Balsante <mibsbalsante@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mibsbalsante/js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/mibsbalsante/js-tdd-course#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  }
+}
