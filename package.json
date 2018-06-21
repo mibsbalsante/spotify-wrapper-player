@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint && npm run test:coverage",
+    "start": "./node_modules/.bin/webpack-dev-server",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "npm test -- --watch",
     "test:coverage": "nyc npm test"
@@ -37,6 +38,7 @@
   },
   "homepage": "https://github.com/mibsbalsante/js-tdd-course#readme",
   "devDependencies": {
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
@@ -45,6 +47,9 @@
     "eslint-plugin-import": "^2.12.0",
     "husky": "^0.14.3",
     "mocha": "^5.2.0",
-    "nyc": "^12.0.2"
+    "nyc": "^12.0.2",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }
