@@ -46,6 +46,8 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0",
     "husky": "^0.14.3",
+    "jsdom": "^11.11.0",
+    "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "webpack": "^4.12.0",
